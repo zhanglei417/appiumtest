@@ -10,6 +10,7 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
 import io.appium.java_client.android.AndroidDriver;
+import method.swipe;
 
 import java.io.File;
 import java.net.URL;
@@ -22,24 +23,29 @@ public class TestNew {
     @BeforeMethod(alwaysRun=true)
     public void setUp() throws Exception {
         // set up appium
-        File classpathRoot = new File(System.getProperty("user.dir"));
-        File appDir = new File(classpathRoot, "apps");
+//        File classpathRoot = new File(System.getProperty("user.dir"));
+//        File appDir = new File(classpathRoot, "apps");
 //        File app = new File(appDir, "ContactManager.apk");
-        File app = new File("/Users/phoenixzhang/AndroidStudioProjects/Activity03/app/build/outputs/apk/app-release.apk");
+//        File app = new File("/Users/phoenixzhang/AndroidStudioProjects/Activity03/app/build/outputs/apk/app-release.apk");
+        File app = new File("/Users/phoenixzhang/downloads/moji.apk");
         DesiredCapabilities capabilities = new DesiredCapabilities();
         capabilities.setCapability(CapabilityType.BROWSER_NAME, "");
         capabilities.setCapability("platformName", "Android");
+        capabilities.setCapability("deviceName","MSM8926");
+        capabilities.setCapability("platformVersion", "4.3");
 //        capabilities.setCapability("deviceName","127.0.0.1:62001");
 //        capabilities.setCapability("platformVersion", "6.0");
-        capabilities.setCapability("deviceName","Android Emulator");
-        capabilities.setCapability("platformVersion", "5.1.1");
+//        capabilities.setCapability("deviceName","Android Emulator");
+//        capabilities.setCapability("platformVersion", "5.1.1");
         capabilities.setCapability("app", app.getAbsolutePath());
 //        capabilities.setCapability("appPackage", "com.example.android.contactmanager");
 //      此处写package名
-        capabilities.setCapability("appPackage", "com.example.phoenixzhang.activity03");
+//        capabilities.setCapability("appPackage", "com.example.phoenixzhang.activity03");
+        capabilities.setCapability("appPackage", "com.moji.mjweather");
 //		此处写入口activity名
-        capabilities.setCapability("appActivity", "MainActivity");
-        driver = new AndroidDriver(new URL("http://127.0.0.1:4723/wd/hub"), capabilities);
+        capabilities.setCapability("appActivity", "LauncherActivity");
+//        capabilities.setCapability("appActivity", "LauncherActivity");
+        driver = new AndroidDriver(new URL("http://127.0.0.1:4725/wd/hub"), capabilities);
     }
  
     @AfterMethod(alwaysRun=true)
@@ -49,7 +55,11 @@ public class TestNew {
  
     @Test(groups={"addContact"})
     public void addContact() throws InterruptedException{
-    	Thread.sleep(3000);
+    	Thread.sleep(5000);
+    	swipe.swipeToLeft(driver, 500, 1);
+    	Thread.sleep(1000);
+    	swipe.swipeToLeft(driver, 500, 1);
+    	Thread.sleep(1000);
 //        WebElement el = driver.findElement(By.xpath("//android.widget.Button"));
 //        Thread.sleep(3000);
 //        el.click();
@@ -60,10 +70,14 @@ public class TestNew {
 ////      driver.findElementByName("Add Contact").click();
 ////    	Thread.sleep(3000);
     }
+    @Test(groups={"addContact"})
+    public void addContact2() throws InterruptedException{
+    	Thread.sleep(5000);
+    }
     
     @Test(groups={"addContact2"})
-    public void addContact2() throws InterruptedException{
-    	Thread.sleep(3000);
+    public void addContact3() throws InterruptedException{
+    	Thread.sleep(5000);
         WebElement el = driver.findElement (By.xpath("//android.widget.Button1"));
         Thread.sleep(3000);
         el.click();
