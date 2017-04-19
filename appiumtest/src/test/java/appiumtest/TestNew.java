@@ -57,7 +57,9 @@ public class TestNew {
     public void addContact() throws InterruptedException{
     	Thread.sleep(5000);
     	swipe.swipeToLeft(driver, 500, 1);
-    	Thread.sleep(1000);
+    	Thread.sleep(2000);
+    	WebElement element = driver.findElement(By.xpath("//android.widget.ImageView[contains(@resource-id,'com.moji.mjweather:id/y_')]"));
+    	driver.tap(1, element, 500);
     	swipe.swipeToLeft(driver, 500, 1);
     	Thread.sleep(1000);
 //        WebElement el = driver.findElement(By.xpath("//android.widget.Button"));
@@ -70,20 +72,20 @@ public class TestNew {
 ////      driver.findElementByName("Add Contact").click();
 ////    	Thread.sleep(3000);
     }
-    @Test(groups={"addContact"})
-    public void addContact2() throws InterruptedException{
-    	Thread.sleep(5000);
-    }
-    
-    @Test(groups={"addContact2"})
-    public void addContact3() throws InterruptedException{
-    	Thread.sleep(5000);
-        WebElement el = driver.findElement (By.xpath("//android.widget.Button1"));
-        Thread.sleep(3000);
-        el.click();
-        Thread.sleep(3000);
-        driver.findElementByName("Add Contact").click();
-    	Thread.sleep(3000);
-    }
+//    @Test(groups={"addContact"})
+//    public void addContact2() throws InterruptedException{
+//    	Thread.sleep(5000);
+//    }
+//    
+//    @Test(groups={"addContact2"})
+//    public void addContact3() throws InterruptedException{
+//    	Thread.sleep(5000);
+//        WebElement el = driver.findElement (By.xpath("//android.widget.Button1"));
+//        Thread.sleep(3000);
+//        el.click();
+//        Thread.sleep(3000);
+//        driver.findElementByName("Add Contact").click();
+//    	Thread.sleep(3000);
+//    }
 }
 
