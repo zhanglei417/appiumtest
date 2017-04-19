@@ -5,7 +5,7 @@
 	<listener class-name="appiumtest.ExtentTestNGIReporterListener"></listener>
 	</listeners>
 	<classes>
-      <class name="test"/>
+      <class name="appiumtest.TestNew"/>
     </classes>
   </test> <!-- Default test -->
 </suite> <!-- Default suite -->
