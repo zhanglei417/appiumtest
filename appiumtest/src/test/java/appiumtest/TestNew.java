@@ -6,11 +6,17 @@ import org.openqa.selenium.remote.CapabilityType;
 import org.openqa.selenium.remote.DesiredCapabilities;
  
 import org.testng.annotations.AfterMethod;
+import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.Test;
 
+import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.android.AndroidDriver;
+import io.appium.java_client.android.AndroidKeyCode;
 import method.swipe;
+import method.mojiScreenShot;
+import method.screenshot;
 
 import java.io.File;
 import java.net.URL;
@@ -18,9 +24,9 @@ import java.util.List;
 
 public class TestNew {
 	
-    private  AndroidDriver driver;
+    private static AndroidDriver driver;
  
-    @BeforeMethod(alwaysRun=true)
+    @BeforeSuite(alwaysRun=true)
     public void setUp() throws Exception {
         // set up appium
 //        File classpathRoot = new File(System.getProperty("user.dir"));
@@ -48,44 +54,35 @@ public class TestNew {
         driver = new AndroidDriver(new URL("http://127.0.0.1:4725/wd/hub"), capabilities);
     }
  
-    @AfterMethod(alwaysRun=true)
+    @AfterSuite(alwaysRun=true)
     public void tearDown() throws Exception {
         driver.quit();
     }
- 
-    @Test(groups={"addContact"})
-    public void addContact() throws InterruptedException{
-    	Thread.sleep(5000);
-    	swipe.swipeToLeft(driver, 500, 1);
-    	Thread.sleep(2000);
-    	WebElement element = driver.findElement(By.xpath("//android.widget.ImageView[contains(@resource-id,'com.moji.mjweather:id/y_')]"));
-    	driver.tap(1, element, 500);
-    	swipe.swipeToLeft(driver, 500, 1);
-    	Thread.sleep(1000);
-//        WebElement el = driver.findElement(By.xpath("//android.widget.Button"));
-//        Thread.sleep(3000);
-//        el.click();
-//        Thread.sleep(3000);
-////      id通过viewer获取 前面是包名：id
-//        driver.findElementById("com.example.android.contactmanager:id/contactSaveButton").click();
-//        Thread.sleep(3000);
-////      driver.findElementByName("Add Contact").click();
-////    	Thread.sleep(3000);
+
+    @Test(groups={"MojiMain"})
+    public void startApp() throws InterruptedException{
+    	Thread.sleep(3000);
+//    	screenshot.mojiScreenShot(driver);
+    	WebElement element = driver.findElement(By.xpath("//android.widget.ImageView[contains(@resource-id,'comd/y_')]"));
+    	driver.quit();
+//    	swipe.swipeToLeft(driver, 500, 1);
+//    	Thread.sleep(2000);
+//    	WebElement element = driver.findElement(By.xpath("//android.widget.ImageView[contains(@resource-id,'com.moji.mjweather:id/y_')]"));
+//    	driver.tap(1, element, 100);
+//    	Thread.sleep(2000);
+//    	driver.pressKeyCode(AndroidKeyCode.HOME);
+//    	Thread.sleep(2000);
+
     }
-//    @Test(groups={"addContact"})
-//    public void addContact2() throws InterruptedException{
+//    @Test(groups={"MojiMain"})
+//    public void startApp2() throws InterruptedException{
+//    	driver.startActivity("com.moji.mjweather", "MainActivity");
 //    	Thread.sleep(5000);
 //    }
-//    
-//    @Test(groups={"addContact2"})
-//    public void addContact3() throws InterruptedException{
-//    	Thread.sleep(5000);
-//        WebElement el = driver.findElement (By.xpath("//android.widget.Button1"));
-//        Thread.sleep(3000);
-//        el.click();
-//        Thread.sleep(3000);
-//        driver.findElementByName("Add Contact").click();
-//    	Thread.sleep(3000);
-//    }
+    
+    public static AppiumDriver getDriver(){
+        return driver;
+    }    
+ 
 }
 
