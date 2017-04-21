@@ -34,7 +34,7 @@ public class testios2 {
         capabilities.setCapability("agentPath", "/usr/local/lib/node_modules/appium/node_modules/appium-xcuitest-driver/WebDriverAgent/WebDriverAgent.xcodeproj");
         capabilities.setCapability(MobileCapabilityType.UDID, "b17e524ddd89b34088e568183a9adae7128ea11a");  
         capabilities.setCapability(MobileCapabilityType.AUTOMATION_NAME, "XCUITest"); 
-        capabilities.setCapability("app", "/Users/phoenixzhang/Downloads/test/test1.app");  
+        capabilities.setCapability("app", "/Users/phoenixzhang/Downloads/test/YYContact.app");  
         driver = new IOSDriver(new URL("http://127.0.0.1:4725/wd/hub"), capabilities);  
     }
  

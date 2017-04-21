@@ -6,7 +6,7 @@
 	<listener class-name="listener.mojiScreenShotListener" />
 	</listeners>
 	<classes>
-      <class name="appiumtest.TestNew"/>
+	<class name="appiumtest.TestNew"/> 
     </classes>
   </test> <!-- Default test -->
 </suite> <!-- Default suite -->
