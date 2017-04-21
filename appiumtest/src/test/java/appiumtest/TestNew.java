@@ -63,7 +63,7 @@ public class TestNew {
     public void startApp() throws InterruptedException{
     	Thread.sleep(3000);
 //    	screenshot.mojiScreenShot(driver);
-    	WebElement element = driver.findElement(By.xpath("//android.widget.ImageView[contains(@resource-id,'comd/y_')]"));
+//    	WebElement element = driver.findElement(By.xpath("//android.widget.ImageView[contains(@resource-id,'comd/y_')]"));
     	driver.quit();
 //    	swipe.swipeToLeft(driver, 500, 1);
 //    	Thread.sleep(2000);
