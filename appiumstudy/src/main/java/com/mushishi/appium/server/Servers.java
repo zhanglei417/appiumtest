@@ -26,7 +26,7 @@ public class Servers {
 	 * */
 	public List<String> getDevices() throws Exception{
 		logger.debug("当前运行的是"+this.getClass()+"类的----》》》"+this.getClass().getName()+"方法");
-		List<String> devList = dos.execCmdConsonle("adb devices");
+		List<String> devList = dos.execCmdConsonle("/Users/phoenixzhang/Library/Android/sdk/platform-tools/adb devices");
 		List<String> deviceRes = new ArrayList<String>();
 		if(devList.size()>2){
 			for(int i=1;i < devList.size()-1;i++){

@@ -5,11 +5,11 @@
         <listener class-name="org.uncommons.reportng.HTMLReporter"/>
         <listener class-name="org.uncommons.reportng.JUnitXMLReporter"/>
     </listeners>
-    <test name="d5ba5e7b">
-        <parameter name="udid" value="d5ba5e7b"/>
-        <parameter name="port" value="4491"/>
+    <test name="MSM8926">
+        <parameter name="udid" value="MSM8926"/>
+        <parameter name="port" value="4490"/>
         <classes>
-            <class name="com.mushishi.appium.datadriver.TestSuiteByExcel"/>
+            <class name="com.mushishi.appium.datadriver.testdemo"/>
         </classes>
     </test>
 </suite>
