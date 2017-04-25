@@ -7,7 +7,7 @@
     </listeners>
     <test name="MSM8926">
         <parameter name="udid" value="MSM8926"/>
-        <parameter name="port" value="4491"/>
+        <parameter name="port" value="4490"/>
         <classes>
             <class name="com.mushishi.appium.datadriver.testdemo"/>
         </classes>

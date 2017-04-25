@@ -24,6 +24,7 @@ public class DosCmd {
 			if(osName.toLowerCase().contains("mac")){
 				String[] command={"/bin/sh","-c",cmdString};
 				process = Runtime.getRuntime().exec(command);
+//				process = Runtime.getRuntime().exec("/Users/phoenixzhang/Library/Android/sdk/platform-tools/adb devices");
 			}else if(osName.toLowerCase().contains("win")){
 				process = Runtime.getRuntime().exec("cmd /c "+cmdString);
 			}

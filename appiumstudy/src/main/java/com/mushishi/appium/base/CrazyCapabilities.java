@@ -33,7 +33,7 @@ public class CrazyCapabilities {
 	}
 	public static void main(String args[]){
 		CrazyCapabilities ca = new CrazyCapabilities();
-		ca.initCaps("E:/www/appiumstudy/appiumstudy/configs/caps.properties", "123");
+		ca.initCaps("/Users/phoenixzhang/Documents/test/appiumstudy/configs/caps.properties", "MSM8926");
 		
 	}
 

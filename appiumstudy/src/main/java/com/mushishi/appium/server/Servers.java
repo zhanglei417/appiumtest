@@ -70,7 +70,7 @@ public class Servers {
 		List<String> commandList = new ArrayList<String>();
 		
 		for(int i =0;i<deviceList.size();i++){
-			String command = "appium -p "+appiumPortList.get(i)+" -bp "+bootstrapPortList.get(i)
+			String command = "/usr/local/bin/node /usr/local/lib/node_modules/appium/build/lib/main.js -p"+appiumPortList.get(i)+" -bp "+bootstrapPortList.get(i)
 			+" -U "+ deviceList.get(i)+">"+path+"/logs/"+deviceList.get(i).split(":")[0]+i+".log";
 			commandList.add(command);
 			System.out.println(command);
@@ -87,9 +87,11 @@ public class Servers {
 	public boolean startServers() throws Exception{
 		System.out.print("当前运行的是"+this.getClass()+"类的----》》》"+this.getClass().getName()+"方法");
 		List<String> startCommand = GeneratServerCommand();
+		System.out.println("===" + startCommand + "===");
 		boolean flag = false;
 		if(startCommand.size()>0){
 			for(String s:startCommand){
+				System.out.println("===" + s + "===");
 				dos.execCmd(s);
 			}
 			flag=true;
@@ -110,4 +112,9 @@ public class Servers {
 		}
 	}*/
 
+public static void main(String args[]) throws InterruptedException{
+	String s1 = "/usr/local/bin/appium -p 4490 -bp 2235 -U MSM8926";
+	DosCmd dos = new DosCmd();
+	dos.execCmdConsonle(s1);		
+	}
 }

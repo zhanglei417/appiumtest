@@ -24,8 +24,8 @@ public class AppiumInit {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
-			classesList.add("com.mushishi.appium.business.LoginBusiness");
-			//classesList.add("com.mushishi.appiumstudy.App");
+//			classesList.add("com.mushishi.appium.business.LoginBusiness");
+			classesList.add("com.mushishi.appium.datadriver.testdemo");
 			try {
 				System.out.println(classesList.get(0));
 				XmlUtil.createTestngXml(classesList);

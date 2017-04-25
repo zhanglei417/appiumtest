@@ -1,40 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite thread-count="2" name="Failed suite [Suite]" parallel="tests">
-  <parameter name="port" value="4492"/>
-  <parameter name="udid" value="DU2TAN1492003864"/>
+<suite thread-count="1" name="Failed suite [Suite]" parallel="tests">
   <listeners>
     <listener class-name="org.uncommons.reportng.HTMLReporter"/>
     <listener class-name="org.uncommons.reportng.JUnitXMLReporter"/>
   </listeners>
-  <test name="750BBLD22KP2(failed)" parallel="tests">
-    <parameter name="port" value="4491"/>
-    <parameter name="udid" value="750BBLD22KP2"/>
+  <test name="MSM8926(failed)" parallel="tests">
+    <parameter name="port" value="4490"/>
+    <parameter name="udid" value="MSM8926"/>
     <classes>
-      <class name="com.mushishi.appium.datadriver.TestSuiteByExcel">
+      <class name="com.mushishi.appium.datadriver.testdemo">
         <methods>
-          <include name="afterClass"/>
-          <include name="afterClass"/>
-          <include name="testTestSuite"/>
           <include name="BeforeClass"/>
-          <include name="BeforeClass"/>
+          <include name="test1"/>
         </methods>
-      </class> <!-- com.mushishi.appium.datadriver.TestSuiteByExcel -->
+      </class> <!-- com.mushishi.appium.datadriver.testdemo -->
     </classes>
-  </test> <!-- 750BBLD22KP2(failed) -->
-  <test name="DU2TAN1492003864(failed)" parallel="tests">
-    <parameter name="port" value="4492"/>
-    <parameter name="udid" value="DU2TAN1492003864"/>
-    <classes>
-      <class name="com.mushishi.appium.datadriver.TestSuiteByExcel">
-        <methods>
-          <include name="afterClass"/>
-          <include name="afterClass"/>
-          <include name="testTestSuite"/>
-          <include name="BeforeClass"/>
-          <include name="BeforeClass"/>
-        </methods>
-      </class> <!-- com.mushishi.appium.datadriver.TestSuiteByExcel -->
-    </classes>
-  </test> <!-- DU2TAN1492003864(failed) -->
+  </test> <!-- MSM8926(failed) -->
 </suite> <!-- Failed suite [Suite] -->

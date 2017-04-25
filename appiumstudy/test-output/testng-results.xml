@@ -2,12 +2,12 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Suite" duration-ms="24852" started-at="2017-04-24T07:48:50Z" finished-at="2017-04-24T07:49:15Z">
+  <suite name="Suite" duration-ms="25780" started-at="2017-04-25T05:55:37Z" finished-at="2017-04-25T05:56:02Z">
     <groups>
     </groups>
-    <test name="MSM8926" duration-ms="24852" started-at="2017-04-24T07:48:50Z" finished-at="2017-04-24T07:49:15Z">
+    <test name="MSM8926" duration-ms="25780" started-at="2017-04-25T05:55:37Z" finished-at="2017-04-25T05:56:02Z">
       <class name="com.mushishi.appium.datadriver.testdemo">
-        <test-method status="PASS" signature="BeforeClass(java.lang.String, java.lang.String)[pri:0, instance:com.mushishi.appium.datadriver.testdemo@51efea79]" name="BeforeClass" is-config="true" duration-ms="21840" started-at="2017-04-24T15:48:50Z" finished-at="2017-04-24T15:49:12Z">
+        <test-method status="PASS" signature="BeforeClass(java.lang.String, java.lang.String)[pri:0, instance:com.mushishi.appium.datadriver.testdemo@610694f1]" name="BeforeClass" is-config="true" duration-ms="22764" started-at="2017-04-25T13:55:37Z" finished-at="2017-04-25T13:55:59Z">
           <params>
             <param index="0">
               <value>
@@ -16,14 +16,14 @@
             </param>
             <param index="1">
               <value>
-                <![CDATA[4490]]>
+                <![CDATA[4491]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- BeforeClass -->
-        <test-method status="PASS" signature="test1()[pri:0, instance:com.mushishi.appium.datadriver.testdemo@51efea79]" name="test1" duration-ms="3003" started-at="2017-04-24T15:49:12Z" finished-at="2017-04-24T15:49:15Z">
+        <test-method status="PASS" signature="test1()[pri:0, instance:com.mushishi.appium.datadriver.testdemo@610694f1]" name="test1" duration-ms="3005" started-at="2017-04-25T13:55:59Z" finished-at="2017-04-25T13:56:02Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- test1 -->
