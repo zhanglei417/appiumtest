@@ -18,6 +18,9 @@ import method.swipe;
 import method.mojiScreenShot;
 import method.screenshot;
 
+import static org.testng.Assert.assertEquals;
+import static org.testng.Assert.assertTrue;
+
 import java.io.File;
 import java.net.URL;
 import java.util.List;
@@ -63,16 +66,31 @@ public class TestNew {
     public void startApp() throws InterruptedException{
     	Thread.sleep(3000);
 //    	screenshot.mojiScreenShot(driver);
+    	
 //    	WebElement element = driver.findElement(By.xpath("//android.widget.ImageView[contains(@resource-id,'comd/y_')]"));
-    	driver.quit();
-//    	swipe.swipeToLeft(driver, 500, 1);
-//    	Thread.sleep(2000);
-//    	WebElement element = driver.findElement(By.xpath("//android.widget.ImageView[contains(@resource-id,'com.moji.mjweather:id/y_')]"));
-//    	driver.tap(1, element, 100);
-//    	Thread.sleep(2000);
+//    	driver.quit();
+    	swipe.swipeToLeft(driver, 500, 1);
+    	Thread.sleep(2000);
+    	WebElement element = driver.findElement(By.xpath("//android.widget.ImageView[contains(@resource-id,'com.moji.mjweather:id/y_')]"));
+    	driver.tap(1, element, 100);
+    	Thread.sleep(2000);
+    	System.out.println(driver.getPageSource());
 //    	driver.pressKeyCode(AndroidKeyCode.HOME);
 //    	Thread.sleep(2000);
-
+    	List<WebElement> elements = driver.findElements(By.xpath("//android.widget.ImageView"));
+    	for (WebElement element1:elements){
+    		driver.tap(1, element1, 100);
+    		Thread.sleep(2000);
+    		String s = driver.getPageSource();
+    		if(!(s.contains("反馈天气")&&s.contains("今天")&&s.contains("明天"))){
+        		driver.pressKeyCode(AndroidKeyCode.BACK);
+        		Thread.sleep(2000);
+    		}
+    		if(driver.getPageSource().contains("墨迹天气")){
+    			driver.tap(1, driver.findElement(By.xpath("//android.widget.TextView[contains(@text,'墨迹天气')]")), 100);
+        		Thread.sleep(2000);
+    		}
+    	}
     }
 //    @Test(groups={"MojiMain"})
 //    public void startApp2() throws InterruptedException{
