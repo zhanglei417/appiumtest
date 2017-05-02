@@ -37,13 +37,16 @@ public class TestNew {
 //        File app = new File(appDir, "ContactManager.apk");
 //        File app = new File("/Users/phoenixzhang/AndroidStudioProjects/Activity03/app/build/outputs/apk/app-release.apk");
         File app = new File("/Users/phoenixzhang/downloads/moji.apk");
+        
         DesiredCapabilities capabilities = new DesiredCapabilities();
+//        不重新安装
+//        capabilities.setCapability("noReset", true);
         capabilities.setCapability(CapabilityType.BROWSER_NAME, "");
         capabilities.setCapability("platformName", "Android");
-        capabilities.setCapability("deviceName","MSM8926");
-        capabilities.setCapability("platformVersion", "4.3");
-//        capabilities.setCapability("deviceName","127.0.0.1:62001");
-//        capabilities.setCapability("platformVersion", "6.0");
+//        capabilities.setCapability("deviceName","MSM8926");
+//        capabilities.setCapability("platformVersion", "4.3");
+        capabilities.setCapability("deviceName","127.0.0.1:62001");
+        capabilities.setCapability("platformVersion", "4.4.2");
 //        capabilities.setCapability("deviceName","Android Emulator");
 //        capabilities.setCapability("platformVersion", "5.1.1");
         capabilities.setCapability("app", app.getAbsolutePath());
