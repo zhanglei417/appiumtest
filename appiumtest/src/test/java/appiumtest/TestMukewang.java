@@ -32,7 +32,7 @@ public class TestMukewang {
     @BeforeSuite(alwaysRun=true)
     public void setUp() throws Exception {
 
-        File app = new File("/Users/phoenixzhang/downloads/mukewang.apk");
+        File app = new File("C:\\Users\\Administrator\\git\\appiumtest1\\appiumtest\\apps\\mukewang.apk");
         DesiredCapabilities capabilities = new DesiredCapabilities();
         capabilities.setCapability(CapabilityType.BROWSER_NAME, "");
         capabilities.setCapability("platformName", "Android");
